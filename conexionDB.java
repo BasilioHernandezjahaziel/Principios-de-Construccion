@@ -10,7 +10,7 @@ import java.sql.DriverManager;
 
 /**
  *
- * @author jahaziel1999
+ * @author jahaziel, David, Gabriel
  */
 public class conexionDB {
     
