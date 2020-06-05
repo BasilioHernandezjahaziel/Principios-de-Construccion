@@ -10,10 +10,10 @@ package uv.principios.dao;
  * @author jahaziel1999
  */
 public class Persona {
-    private String Clave;
-    private String Nombre;
-    private String Direccion;
-    private String Telefono;
+    private String clave;
+    private String nombre;
+    private String direccion;
+    private String telefono;
     private Departamento departamento;
 
     public Departamento getDepartamento() {
@@ -26,35 +26,35 @@ public class Persona {
     
     
     public String getClave() {
-        return Clave;
+        return clave;
     }
 
-    public void setClave(String Clave) {
-        this.Clave = Clave;
+    public void setClave(String clave) {
+        this.clave = clave;
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getDireccion() {
-        return Direccion;
+        return direccion;
     }
 
-    public void setDireccion(String Direccion) {
-        this.Direccion = Direccion;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getTelefono() {
-        return Telefono;
+        return telefono;
     }
 
-    public void setTelefono(String Telefono) {
-        this.Telefono = Telefono;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
     
 }
