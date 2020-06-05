@@ -34,8 +34,7 @@ public class conexionDB {
             System.out.println("Ocurrio un error:" + e.getMessage());
         }
         System.out.println("La conexion se realizo sin problemas");
-    }
-    
+    }  
     public boolean execute(String sql){
         boolean res=false;
         try{

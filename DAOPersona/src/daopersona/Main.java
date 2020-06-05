@@ -16,8 +16,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hola mundo!");
         conexionDB con;
-        con=conexionDB.getInstance();
-        
+        con=conexionDB.getInstance();   
         Persona p=new Persona();
         p.setClave("01");
         p.setNombre("juan");
