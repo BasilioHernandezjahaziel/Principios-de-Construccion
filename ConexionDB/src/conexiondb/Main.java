@@ -10,10 +10,8 @@ package conexiondb;
  * @author jahaziel, David, Gabriel
  */
 public class Main {
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {    
         ConexionDB con;
-        con=ConexionDB.getInstance();
-        
+        con=ConexionDB.getInstance();  
     }
 }
