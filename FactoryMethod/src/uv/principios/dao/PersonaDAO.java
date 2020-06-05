@@ -5,7 +5,7 @@
  */
 package uv.principios.dao;
 
-import uv.principios.con.conexionDB;
+import uv.principios.con.ConexionDB;
 
 /**
  *
@@ -16,7 +16,7 @@ public class PersonaDAO implements IDAOGeneral<Persona>{
     @Override
     public boolean guardar(Persona pojo) {
         boolean res=false;
-        conexionDB con=conexionDB.getInstance();
+        ConexionDB con=ConexionDB.getInstance();
         String sql="insert into persona (clave, nombre, direccion, telefono, departamento) values" 
                 + "('" + pojo.getClave() + "','" + pojo.getNombre() + "','" + pojo.getDireccion() + "','" +
                          pojo.getTelefono() + "','" + pojo.getDepartamento() + "')";

@@ -10,30 +10,35 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
+import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 /**
  *
  * @author jahaziel, David, Gabriel
  */
-public class conexionDB {
+public class ConexionDB {
     
-    private static conexionDB con=null;
-    public static conexionDB getInstance(){
+    private static ConexionDB con=null;
+    public static ConexionDB getInstance(){
         if(con==null)
-            con=new conexionDB();
+            con=new ConexionDB();
         return con;
     }
     private Connection conn = null;
-    private conexionDB(){
+    private ConexionDB(){
        String urlDatabase = "jdbc:postgresql://localhost:5432/CRUD";
         try{
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection(urlDatabase, "postgres", "password");
         } catch (Exception e) {
-            System.out.println("Ocurrio un error:" + e.getMessage());
+            Logger logger=Logger.getLogger(ConexionDB.class.getName());
+            LogRecord r=new LogRecord(Level.INFO,"Ocurrio un error:");
+            logger.log(r);
         }
-        System.out.println("La conexion se realizo sin problemas");
+        Logger logger=Logger.getLogger(ConexionDB.class.getName());
+        LogRecord r=new LogRecord(Level.INFO,"La conexion se realizo sin problemas");
+        logger.log(r);
     }
     
     public boolean execute(String sql){
@@ -42,7 +47,7 @@ public class conexionDB {
             Statement st=conn.createStatement();
             st.execute(sql);
         } catch (SQLException ex){
-            Logger.getLogger(conexionDB.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConexionDB.class.getName()).log(Level.SEVERE, null, ex);
         }
         return res;
     }

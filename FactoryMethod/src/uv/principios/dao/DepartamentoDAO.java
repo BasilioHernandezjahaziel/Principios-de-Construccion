@@ -5,7 +5,7 @@
  */
 package uv.principios.dao;
 
-import uv.principios.con.conexionDB;
+import uv.principios.con.ConexionDB;
 
 /**
  *
@@ -16,7 +16,7 @@ public class DepartamentoDAO implements IDAOGeneral<Departamento>{
     @Override
     public boolean guardar(Departamento pojo) {
         boolean res=false;
-        conexionDB con=conexionDB.getInstance();
+        ConexionDB con=ConexionDB.getInstance();
         String sql="insert into departamento (clave, nombre) values ('" 
                 + pojo.getClave() + "','" + pojo.getNombre() + "')";
         res=con.execute(sql);
