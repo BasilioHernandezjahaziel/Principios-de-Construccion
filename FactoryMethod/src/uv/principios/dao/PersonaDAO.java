@@ -5,7 +5,7 @@
  */
 package uv.principios.dao;
 
-import uv.principios.con.ConexionDB;
+import uv.principios.utils.ConexionDB;
 
 /**
  *
