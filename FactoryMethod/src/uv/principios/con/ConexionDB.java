@@ -25,6 +25,7 @@ public class ConexionDB {
             con=new ConexionDB();
         return con;
     }
+    
     private Connection conn = null;
     private ConexionDB(){
        String urlDatabase = "jdbc:postgresql://localhost:5432/CRUD";
