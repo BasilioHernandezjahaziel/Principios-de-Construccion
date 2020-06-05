@@ -31,5 +31,5 @@ public class ConexionDB {
             System.out.println("Ocurrio un error:" + e.getMessage());
         }
         System.out.println("La conexion se realizo sin problemas");
-    } 
+    }
 }
