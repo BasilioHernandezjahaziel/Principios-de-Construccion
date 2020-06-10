@@ -28,7 +28,7 @@ public class ConexionDB {
     
     private Connection conn = null;
     private ConexionDB(){
-       String urlDatabase = "jdbc:postgresql://localhost:5432/CRUD";
+       String urlDatabase = "jdbc:postgresql://localhost:5432/prueba";
         try{
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection(urlDatabase, "postgres", "password");

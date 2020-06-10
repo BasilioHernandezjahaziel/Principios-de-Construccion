@@ -24,7 +24,7 @@ public class Main {
         p.setTelefono("271");
         
         Departamento dep=new Departamento();
-        dep.setClave("1");
+        dep.setClave("10");
         p.setDepartamento(dep);
         
         daop.guardar(p);
