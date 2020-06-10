@@ -18,13 +18,13 @@ public class Main {
     public static void main(String [] args){
         IDAOGeneral  daop=FactoryDAO.create(FactoryDAO.TypeDAO.PERSONA);
         Persona p=new Persona();
-        p.setClave("3");
+        p.setClave("1");
         p.setNombre("Ricardo");
         p.setDireccion("Av .9");
         p.setTelefono("271");
         
         Departamento dep=new Departamento();
-        dep.setClave("3");
+        dep.setClave("1");
         p.setDepartamento(dep);
         
         daop.guardar(p);

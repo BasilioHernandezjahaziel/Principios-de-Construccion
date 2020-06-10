@@ -44,11 +44,20 @@ public class ConexionDB {
     
     public boolean execute(String sql){
         boolean res=false;
+        Statement st = null;
         try{
-            Statement st=conn.createStatement();
+            st = conn.createStatement();
             st.execute(sql);
         } catch (SQLException ex){
             Logger.getLogger(ConexionDB.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try{
+                    st.close();
+                }catch(SQLException ex){
+                   Logger.getLogger(ConexionDB.class.getName()).log(Level.SEVERE, null, ex); 
+                }
+            }
         }
         return res;
     }
